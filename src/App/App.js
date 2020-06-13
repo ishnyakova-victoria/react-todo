@@ -13,6 +13,9 @@ function App() {
           <Route path="/add">
             <Form />
           </Route>
+          <Route path="/edit/:todoId">
+            <Form />
+          </Route>
           <Route path="/view/:todoId">
             <View />
           </Route>
