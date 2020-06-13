@@ -10,7 +10,7 @@ export class List extends React.Component {
 
   render() {
     return (
-      <div className="list-container"></div>
+      <div className="list-container">This is List page</div>
     );
   }
 }
