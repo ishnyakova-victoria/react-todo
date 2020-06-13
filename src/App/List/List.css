@@ -24,3 +24,11 @@
   border-bottom: 1px solid #a9a9a9;
   padding: 4px 12px;
 }
+
+.todos {
+  list-style: none;
+  padding-left: 15px;
+}
+.todos .todo {
+  padding: 4px 12px;
+}
