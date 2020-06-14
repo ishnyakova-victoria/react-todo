@@ -11,14 +11,14 @@ export class Form extends React.Component {
   render() {
     return (
       <div className="form-container">
-        <form>
+        <form method="">
           <label htmlFor="todo-title">
             <span>Title:</span>
             <input id="todo-title" name="title" type="text" placeholder="Enter ToDo title" />
           </label>
           <label htmlFor="todo-category">
             <span>Category:</span>
-            <select id="todo-category" name="title" type="text" placeholder="Select Category">
+            <select id="todo-category" name="category" type="text" placeholder="Select Category">
               <option value="">Select Category</option>
               <option value="category-1">Category 1</option>
               <option value="category-2">Category 2</option>
@@ -28,11 +28,11 @@ export class Form extends React.Component {
           </label>
           <label htmlFor="todo-datetime">
             <span>Date:</span>
-            <input id="todo-title" name="title" type="datetime-local" placeholder="Pick Date & Time" />
+            <input id="todo-title" name="datetime" type="datetime-local" placeholder="Pick Date & Time" />
           </label>
           <label htmlFor="todo-content">
             <span>Content:</span>
-            <textarea id="todo-title" name="title" type="text" placeholder="Enter Content (optional)"></textarea>
+            <textarea id="todo-title" name="content" type="text" placeholder="Enter Content (optional)"></textarea>
           </label>
           <button>Save</button>
         </form>
