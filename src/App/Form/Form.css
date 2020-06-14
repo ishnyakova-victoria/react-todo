@@ -1,3 +1,51 @@
 .form-container {
+  padding: 15px;
+}
 
+form {
+}
+form label {
+  display: block;
+  width: 100%;
+  clear: both;
+  height: calc(1.2rem + 2px + 8px);
+  margin-bottom: 8px;
+}
+form label span {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 1.2rem;
+  padding: 4px 0px;
+}
+form label input {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 1.2rem;
+  padding: 4px 8px;
+  border: 1px solid #a9a9a9;
+}
+form label select {
+  display: block;
+  float: left;
+  width: 218px;
+  border: 1px solid #a9a9a9;
+  margin-top: 6px;
+}
+form label textarea {
+  display: block;
+  float: left;
+  width: calc(100% - 137px);
+  height: 15rem;
+  padding: 4px 8px;
+  border: 1px solid #a9a9a9;
+  margin-bottom: 8px;
+}
+form button {
+  margin-left: 75px;
+  background: none;
+  border: 1px solid #a9a9a9;
+  padding: 4px 12px;
+  margin-right: 8px;
 }
