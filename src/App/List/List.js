@@ -1,6 +1,7 @@
 import React from 'react';
 import './List.css';
 import { Categories } from "./Categories/Categories";
+import { Link } from 'react-router-dom';
 
 export class List extends React.Component {
   state = {};
@@ -13,8 +14,8 @@ export class List extends React.Component {
     return (
       <div className="list-container">
         <div className="manage-list-buttons">
-          <button className="button">Add Category</button>
-          <button className="button">Add ToDo</button>
+          <a className="button">Add Category</a>
+          <Link  className="button" to="/add">Add ToDo</Link>
         </div>
                 
         <Categories />
