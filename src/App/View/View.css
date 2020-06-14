@@ -1,3 +1,30 @@
 .view-container {
+  padding: 15px;
+}
 
+.manage-view-buttons {
+}
+.manage-view-buttons .button {
+  background: none;
+  border: 1px solid #a9a9a9;
+  padding: 4px 12px;
+  margin-right: 8px;
+}
+.manage-view-buttons .button:last-child {
+  margin-right: 0px;
+}
+
+.todo {
+  margin: 16px auto;
+  padding: 4px 12px;
+  border: 1px solid #a9a9a9;
+}
+.todo h2,
+.todo p {
+  margin: 16px 0;
+  padding: 0;
+}
+.todo p.remaining {
+  font-size: 14px;
+  font-style: italic;
 }
