@@ -1,6 +1,7 @@
 import React from 'react';
 import './Categories.css';
 import { Todos } from "./Todos/Todos";
+import { connect } from 'react-redux';
 
 export class Categories extends React.Component {
   state = {};
@@ -24,4 +25,16 @@ export class Categories extends React.Component {
   }
 }
 
-export default Categories;
+const mapStateToProps = (state) => ({
+  categories: state.categories,
+  todos: state.todos
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  //toggleCategory: (id) => dispatch(toggleCategory(id))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Categories);

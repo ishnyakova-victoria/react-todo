@@ -1,10 +1,4 @@
-import { LIST_TODO, ADD_TODO } from './ActionTypes';
-
-export const listTodo = () => {
-  return {
-    type: LIST_TODO
-  };
-}
+import { ADD_TODO } from './ActionTypes';
 
 export const addTodo = (todo) => {
   return {

@@ -1,4 +1,4 @@
-import { LIST_TODO, ADD_TODO } from '../Actions/ActionTypes';
+import { ADD_TODO } from '../Actions/ActionTypes';
 
 const initialState = {
   todos: []
@@ -6,10 +6,9 @@ const initialState = {
 
 export const todoReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LIST_TODO: 
-      return Object.assign({}, state);
     case ADD_TODO:
       return Object.assign({}, state).todos.push(action.payload);
+      break;
     default: 
       return state;
   }
