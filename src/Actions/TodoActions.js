@@ -6,9 +6,9 @@ export const listTodo = () => {
   };
 }
 
-export const addTodo = (text) => {
+export const addTodo = (todo) => {
   return {
     type: ADD_TODO,
-    payload: text
+    payload: todo
   };
 }
