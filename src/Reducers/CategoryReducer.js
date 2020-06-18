@@ -1,5 +1,10 @@
 const initialState = {
-  categories: []
+  categories: [
+    {
+      id: 1,
+      name: 'Category 1'
+    }
+  ]
 };
 
 export const categoryReducer = (state = initialState, action) => {

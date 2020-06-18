@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import { todoReducer } from './TodoReducer';
+import { categoryReducer } from './CategoryReducer';
 
 export const rootReducer = combineReducers({
-  todoReducer
+  todoReducer,
+  categoryReducer
 });
 
 export default rootReducer;

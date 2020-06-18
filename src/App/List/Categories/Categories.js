@@ -4,37 +4,32 @@ import { Todos } from "./Todos/Todos";
 import { connect } from 'react-redux';
 
 export class Categories extends React.Component {
-  state = {};
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <ul className="categories">
-        <li className="category">Category 1
-          <Todos />
-        </li>
-        <li className="category">Category 2</li>
-        <li className="category">Category 3</li>
-        <li className="category">Category 4</li>
-        <li className="category">Category 5</li>
+        {this.props.categories.map((category) => {
+          return (
+            <li className="category" key={category.id}>{category.name}
+              <Todos />
+            </li>
+          );
+        })}
       </ul>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
-  categories: state.categories,
-  todos: state.todos
-})
+const mapStateToProps = (state) => {
+  return {
+    categories: state.categoryReducer.categories,
+    todos: state.todoReducer.todos
+  };
+};
 
+/*
 const mapDispatchToProps = (dispatch) => ({
-  //toggleCategory: (id) => dispatch(toggleCategory(id))
-})
+  toggleCategory: (id) => dispatch(toggleCategory(id))
+});
+*/
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Categories);
+export default connect(mapStateToProps)(Categories);

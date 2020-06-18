@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
-import { View } from './View/View';
-import { List } from './List/List';
-import { Form } from './Form/Form';
+import View from './View/View';
+import List from './List/List';
+import Form from './Form/Form';
 
 function App() {
   return (
