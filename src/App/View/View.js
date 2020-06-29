@@ -1,5 +1,6 @@
 import React from 'react';
 import './View.css';
+import { Link } from "react-router-dom";
 
 export class View extends React.Component {
   state = {};
@@ -12,8 +13,9 @@ export class View extends React.Component {
     return (
       <div className="view-container">
         <div className="manage-view-buttons">
-          <button className="button">Edit</button>
-          <button className="button">Delete</button>
+          <Link className="button" to="/">&lt; Back</Link>
+          <Link className="button">Edit</Link>
+          <Link className="button">Delete</Link>
         </div>
         <div className="todo">
           <h2>Title</h2>
