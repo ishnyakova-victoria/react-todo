@@ -14,4 +14,4 @@ export const todoReducer = (state = initialState, action) => {
     default: 
       return state;
   }
-}
+};

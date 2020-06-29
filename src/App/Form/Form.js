@@ -27,7 +27,7 @@ export class Form extends React.Component {
       date: this.todo.date.value,
       content: this.todo.content.value,
     });
-  }
+  };
 
   render() {
     return (
