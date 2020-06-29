@@ -26,10 +26,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-/*
 const mapDispatchToProps = (dispatch) => ({
-  toggleCategory: (id) => dispatch(toggleCategory(id))
+  //toggleCategory: (id) => dispatch(toggleCategory(id))
 });
-*/
 
-export default connect(mapStateToProps)(Categories);
+export default connect(mapStateToProps, mapDispatchToProps)(Categories);

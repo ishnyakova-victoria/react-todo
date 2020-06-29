@@ -49,3 +49,26 @@ form button {
   padding: 4px 12px;
   margin-right: 8px;
 }
+
+.manage-form-buttons {
+  margin-bottom: 8px;
+}
+.manage-form-buttons .button {
+  background: none;
+  border: 1px solid #a9a9a9;
+  padding: 4px 12px;
+  padding-bottom: 6px;
+  margin: 0px;
+  margin-right: 8px;
+  box-sizing: border-box;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  color: #000000;
+}
+.manage-form-buttons a.button {
+  display: inline-block;
+  text-decoration: none;
+}
+.manage-form-buttons .button:last-child {
+  margin-right: 0px;
+}

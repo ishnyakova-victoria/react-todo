@@ -7,7 +7,9 @@ const initialState = {
 export const todoReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
-      return Object.assign({}, state).todos.push(action.payload);
+      let newState = Object.assign({}, state);
+      newState.todos.push(action.payload);
+      return newState;
       break;
     default: 
       return state;
