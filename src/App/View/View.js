@@ -14,8 +14,8 @@ export class View extends React.Component {
       <div className="view-container">
         <div className="manage-view-buttons">
           <Link className="button" to="/">&lt; Back</Link>
-          <Link className="button">Edit</Link>
-          <Link className="button">Delete</Link>
+          <Link className="button" to="/">Edit</Link>
+          <Link className="button" to="/">Delete</Link>
         </div>
         <div className="todo">
           <h2>Title</h2>

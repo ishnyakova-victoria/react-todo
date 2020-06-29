@@ -1,6 +1,7 @@
 import React from 'react';
 import './Todos.css';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 
 export class Todos extends React.Component {
   state = {};
@@ -12,21 +13,30 @@ export class Todos extends React.Component {
   render() {
     return (
       <ul className="todos">
-        <li className="todo">
-          <Link to="/view/1">Todo 1</Link>
-        </li>
-        <li className="todo">
-          <Link to="/view/2">Todo 2</Link>
-        </li>
-        <li className="todo">
-          <Link to="/view/3">Todo 3</Link>
-        </li>
-        <li className="todo">
-          <Link to="/view/4">Todo 4</Link>
-        </li>
+        {this.props.todos.filter((todo) => todo.category === this.props.category).map((todo) => {
+          return (<li className="todo" key={todo.id}>
+            <Link to={{
+              pathname: '/view/' + todo.id
+            }}>
+              {todo.title}
+            </Link>
+          </li>);
+        })}
       </ul>
     );
   }
 }
 
-export default Todos;
+const mapStateToProps = (state) => {
+  return {
+    categories: state.categoryReducer.categories,
+    todos: state.todoReducer.todos
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Todos);

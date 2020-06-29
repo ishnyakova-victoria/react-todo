@@ -22,8 +22,9 @@ export class Form extends React.Component {
     event.preventDefault();
 
     this.props.addTodo({
+      id: this.props.todos.length + 1,
       title: this.todo.title.value,
-      category: this.todo.category.value,
+      category: parseInt(this.todo.category.value),
       date: this.todo.date.value,
       content: this.todo.content.value,
     });

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Categories.css';
-import { Todos } from "./Todos/Todos";
+import Todos from "./Todos/Todos";
 import { connect } from 'react-redux';
 
 export class Categories extends React.Component {
@@ -10,7 +10,7 @@ export class Categories extends React.Component {
         {this.props.categories.map((category) => {
           return (
             <li className="category" key={category.id}>{category.name}
-              <Todos />
+              <Todos category={category.id} />
             </li>
           );
         })}
