@@ -1,6 +1,6 @@
 import React from 'react';
 import './Form.css';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addTodo } from '../../Actions/TodoActions';
 
@@ -28,6 +28,8 @@ export class Form extends React.Component {
       date: this.todo.date.value,
       content: this.todo.content.value,
     });
+
+    this.props.history.push('/');
   };
 
   render() {
@@ -78,4 +80,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Form));
