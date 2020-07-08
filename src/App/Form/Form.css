@@ -26,12 +26,18 @@ form label input {
   padding: 4px 8px;
   border: 1px solid #a9a9a9;
 }
+form label input.input-error {
+  border-color: red;
+}
 form label select {
   display: block;
   float: left;
   width: 218px;
   border: 1px solid #a9a9a9;
   margin-top: 6px;
+}
+form label select.input-error {
+  border-color: red;
 }
 form label textarea {
   display: block;
@@ -41,6 +47,15 @@ form label textarea {
   padding: 4px 8px;
   border: 1px solid #a9a9a9;
   margin-bottom: 8px;
+}
+form label textarea.input-error {
+  border-color: red;
+}
+form label span.error-message {
+  display: block;
+  color: red;
+  min-width: 50%;
+  margin-left: 1rem;
 }
 form button {
   margin-left: 75px;
