@@ -10,7 +10,7 @@ export class Categories extends React.Component {
         {this.props.categories.map((category) => {
           return (
             <li className="category" key={category.id}>{category.name}
-              <Todos category={category.id} />
+              <Todos categoryId={category.id} />
             </li>
           );
         })}

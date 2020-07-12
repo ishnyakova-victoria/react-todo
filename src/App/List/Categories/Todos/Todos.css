@@ -5,6 +5,8 @@
 
 .todos .todo {
   padding: 4px 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .todos li a {
@@ -15,4 +17,24 @@
 .todos li a:hover,
 .todoss li a:focus {
   text-decoration: underline;
+}
+
+.todos li button.btn-link {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 0px;
+  background: none;
+  font-size: 16px;
+  outline: none;
+}
+.todos li button.btn-link:hover,
+.todos li button.btn-link:focus {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.todos li span.expired {
+  color: red;
+}
+.todos li span.not-expired {
+  color: green;
 }

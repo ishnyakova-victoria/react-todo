@@ -12,7 +12,7 @@ export const Form = (props) => {
     props.addTodo({
       ...data, 
       id: props.todos.length + 1,
-      category: parseInt(data.category)
+      categoryId: parseInt(data.categoryId)
     });
 
     props.history.push('/');
@@ -31,7 +31,7 @@ export const Form = (props) => {
         </label>
         <label htmlFor="todo-category">
           <span>Category:</span>
-          <select id="todo-category" name="category" type="text" ref={register({required: "Category is required"})} placeholder="Select Category" className={errors.category ? 'input-error' : ''}>
+          <select id="todo-category" name="categoryId" type="text" ref={register({required: "Category is required"})} placeholder="Select Category" className={errors.category ? 'input-error' : ''}>
             <option value="">Select Category</option>
             {props.categories.map((category) => {
               return <option value={category.id} key={category.id}>{category.name}</option>
