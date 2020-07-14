@@ -41,7 +41,7 @@ export const Form = (props) => {
         </label>
         <label htmlFor="todo-datetime">
           <span>Date:</span>
-          <input id="todo-title" name="datetime" type="datetime-local" ref={register({required: "Datetime is required", pattern: {value: /^\d{4}-[0-1]{1}\d{1}-[0-3]{1}\d{1} [0-2]{1}\d{1}:[0-5]{1}\d{1}$/i, message: 'Invalid datetime format'}})} placeholder="Pick Date & Time"  className={errors.datetime ? 'input-error' : ''}/>
+          <input id="todo-title" name="datetime" type="datetime-local" ref={register({required: "Datetime is required"})} placeholder="Pick Date & Time"  className={errors.datetime ? 'input-error' : ''}/>
           <span className="error-message">{errors.datetime && errors.datetime.message}</span>
         </label>
         <label htmlFor="todo-content">

@@ -48,3 +48,10 @@
 .manage-view-buttons .button:last-child {
   margin-right: 0px;
 }
+
+.todo p.expired {
+  color: red;
+}
+.todo p.not-expired {
+  color: green;
+}
