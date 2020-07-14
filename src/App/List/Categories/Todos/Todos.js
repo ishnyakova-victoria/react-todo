@@ -3,6 +3,7 @@ import './Todos.css';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import * as moment from 'moment';
+import { removeTodo } from '../../../../Actions/TodoActions';
 
 export class Todos extends React.Component {
   state = {};
@@ -13,11 +14,21 @@ export class Todos extends React.Component {
 
   isExpired = (time) => {
     return (new Date(time)) < (new Date()) ? true : false;
-  }
+  };
 
   timeLeft = (time) => {
-    return this.isExpired(time) ? moment(time).fromNow() : moment(time).toNow();
-  }
+    return moment(time).fromNow();
+  };
+
+  removeTodo = (todo) => {
+    const isConfirmed = window.confirm('Do you really want to delete todo \'' + todo.title + '\'?');
+
+    const { removeTodo } = this.props;
+
+    if (isConfirmed) {
+      removeTodo(todo.id);
+    }
+  };
 
   render() {
     return (
@@ -38,7 +49,7 @@ export class Todos extends React.Component {
                 Edit
               </Link>
               &nbsp;
-              <button className="btn-link">Delete</button>
+              <button className="btn-link" onClick={() => { this.removeTodo(todo) }}>Delete</button>
             </span>
           </li>);
         })}
@@ -56,6 +67,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    removeTodo: (todoId) => dispatch(removeTodo(todoId))
   };
 };
 

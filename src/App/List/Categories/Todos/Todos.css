@@ -12,6 +12,7 @@
 .todos li a {
   color: black;
   text-decoration: none;
+  padding: 0px 8px;
 }
 
 .todos li a:hover,
@@ -31,7 +32,9 @@
   text-decoration: underline;
   cursor: pointer;
 }
-
+.todos li span {
+  padding: 0px 8px;
+}
 .todos li span.expired {
   color: red;
 }
