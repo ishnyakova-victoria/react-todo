@@ -79,7 +79,11 @@ export class View extends React.Component {
       <div className="view-container">
         <div className="manage-view-buttons">
           <Link className="button" to="/">&lt; Back</Link>
-          <Link className="button" to="/">Edit</Link>
+          <Link className="button" to={{
+            pathname: '/edit/' + this.todo.id
+          }}>
+            Edit
+          </Link>
           <button className="button" onClick={this.removeTodo}>Delete</button>
         </div>
         <div className="todo">

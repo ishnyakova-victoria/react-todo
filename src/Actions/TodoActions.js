@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO } from './ActionTypes';
+import { ADD_TODO, REMOVE_TODO, EDIT_TODO } from './ActionTypes';
 
 export const addTodo = (todo) => {
   return {
@@ -11,5 +11,12 @@ export const removeTodo = (todoId) => {
   return {
     type: REMOVE_TODO,
     payload: todoId
+  };
+};
+
+export const editTodo = (todo) => {
+  return {
+    type: EDIT_TODO,
+    payload: todo
   };
 };
