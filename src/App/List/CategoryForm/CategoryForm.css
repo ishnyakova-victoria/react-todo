@@ -1,0 +1,15 @@
+.category-form-container {
+
+}
+form label input {
+  padding: 4px 8px;
+  border: 1px solid #a9a9a9;
+}
+form label input.input-error {
+  border-color: red;
+}
+form label span.error-message {
+  display: block;
+  color: red;
+  min-width: 50%;
+}
