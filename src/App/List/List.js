@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 
 export class List extends React.Component {
   state = {
-    showCategoryForm: false
+    showCategoryForm: false,
+    categoryId: null
   };
 
   constructor(props) {
@@ -23,7 +24,16 @@ export class List extends React.Component {
   closeCategoryForm = () => {
     this.setState({
       ...this.state,
-      showCategoryForm: false
+      showCategoryForm: false,
+      categoryId: null
+    });
+  };
+
+  editCategoryForm = (categoryId) => {
+    this.setState({
+      ...this.state,
+      showCategoryForm: true,
+      categoryId: categoryId
     });
   };
 
@@ -37,12 +47,12 @@ export class List extends React.Component {
 
         {this.state.showCategoryForm ? 
           (<div className="category-form">
-            <CategoryForm onCancel={this.closeCategoryForm} />
+            <CategoryForm onCancel={this.closeCategoryForm} categoryId={this.state.categoryId} />
           </div>) :
           null
         }
                 
-        <Categories />
+        <Categories editCategoryForm={this.editCategoryForm} />
       </div>
     );
   }
