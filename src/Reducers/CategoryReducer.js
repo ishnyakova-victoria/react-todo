@@ -37,13 +37,13 @@ export const categoryReducer = (state = initialState, action) => {
     case TOGGLE_CATEGORY:
       return {
         categories: [...state.categories].map((category) => {
-            return (category.id === action.payload) ? 
-              {
-                ...category,
-                isCollapsed: !category.isCollapsed
-              } :
-              category;
-          })
+          return (category.id === action.payload) ? 
+            {
+              ...category,
+              isCollapsed: !category.isCollapsed
+            } :
+            category;
+        })
       };
       break;
     default:
